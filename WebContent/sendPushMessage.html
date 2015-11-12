@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Send Push Message</title>
+<link href="styles/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="scripts/jackson_commonUrl.js"></script>
+<script type="text/javascript" src="scripts/jackson_sendPushMessage.js"></script>
+</head>
+<body>
+	<header>
+	<div class="headercontent">
+		<div class="logo"></div>
+	</div>
+
+	</header>
+	<article>
+	<div class="formcontent">
+		<form>
+			<table width="100%">
+				<tr>
+					<th width="30%"><hr /></th>
+					<th align="center">Send MaslulNo Push Message</th>
+					<th width="30%"><hr /></th>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+			<table width="80%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="31%" align="right">MaslulNo:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="idInput" name="idInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">CycleNumber:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="cycleNumberInput" name="cycleNumberInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">CourseNumber:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="courseNumberInput" name="courseNumberInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">CourseName:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="courseNameInput" name="courseNameInput" /></td>
+				</tr>
+				
+				<tr>
+					<td width="36%" colspan="2" align="center"><input type="button"
+						value="send" id="sendMaslulNo" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	</article>
+	<!-- push job message -->
+	<article>
+	<div class="formcontent">
+		<form>
+			<table width="100%">
+				<tr>
+					<th width="30%"><hr /></th>
+					<th align="center">Send Job Push Message</th>
+					<th width="30%"><hr /></th>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+			<table width="80%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="31%" align="right">ID:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="jobIdinput" name="jobIdinput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">Title:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="titleInput" name="titleInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">Company:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="companyInput" name="companyInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">Area:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="areaInput" name="areaInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">Domain:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="domainInput" name="domainInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">Experience:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="experienceInput" name="experienceInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">Text:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="textInput" name="textInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">Requirements:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="requirementsInput" name="requirementsInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">Email:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="emailInput" name="emailInput" /></td>
+				</tr>
+				<tr>
+					<td width="36%" colspan="2" align="center"><input type="button"
+						value="send" id="sendJob"/></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	</article>
+	<!-- push class message -->
+	<article>
+	<div class="formcontent">
+		<form>
+			<table width="100%">
+				<tr>
+					<th width="30%"><hr /></th>
+					<th align="center">Send Class Push Message</th>
+					<th width="30%"><hr /></th>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+			<table width="80%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="31%" align="right">ClassId:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="classIdInput" name="classIdInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">CycleNumber:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="classNamenput" name="classNamenput" /></td>
+				</tr>
+				<tr>
+					<td width="36%" colspan="2" align="center"><input type="button"
+						value="send" id="sendClass"/></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	</article>
+	<!-- push grade message -->
+	<article>
+	<div class="formcontent">
+		<form>
+			<table width="100%">
+				<tr>
+					<th width="30%"><hr /></th>
+					<th align="center">Send Grade Push Message</th>
+					<th width="30%"><hr /></th>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+			<table width="80%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="31%" align="right">GradeId:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="gradeIdInput" name="gradeIdInput" /></td>
+				</tr>
+				<tr>
+					<td width="31%" align="right">CycleNumber:</td>
+					<td width="33%"><input type="text" maxlength="30" width="100%"
+						id="gradeNameInput" name="gradeNameInput" /></td>
+				</tr>
+				<tr>
+					<td width="36%" colspan="2" align="center"><input type="button"
+						value="send" id="sendGrade" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	</article>
+	<footer> JBT Backoffice Management System </footer>
+</body>
+</html>

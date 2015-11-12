@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Set Image</title>
+<link href="styles/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="scripts/jackson_commonUrl.js"></script>
+<script type="text/javascript" src="scripts/jackson_adintermission.js"></script>
+<script type="text/javascript" src="scripts/jackson_defineMap.js"></script>
+<script type="text/javascript" src="scripts/jackson_setimage.js"></script>
+</head>
+
+<body>
+	<header>
+	<div class="headercontent">
+		<div class="logo"></div>
+		<button class="logoutbtn">Logout</button>
+		<div class="menu">
+			<ul>
+				<li><a href="index_uploadimage.html">Upload Ad Image</a></li>
+				<!--  
+				<li><a href="index_setimage.html">Set Ad Image</a></li>
+				
+				<li><a href="index_addjobalertperoid.html">Add Alert Period</a></li>
+				-->
+				<li><a href="index_email.html">Set Email</a></li>
+				<li><a href="index_settimeout.html">Set Timeout</a></li>
+			</ul>
+		</div>
+	</div>
+
+	</header>
+	<article>
+	<div class="formcontent">
+		<form action="AddAlertPeriodServlet" method="post"
+			onsubmit="return addperiod();">
+			<table width="100%">
+				<tr>
+					<th width="30%"><hr /></th>
+					<th align="center">Set Image Attribute</th>
+					<th width="30%"><hr /></th>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+			<table width="80%" cellpadding="0" cellspacing="0">
+				<thead>
+					<tr>
+						<td align="right" colspan="2">Choose Ad Type:</td>
+						<td colspan="2"><select id="type">
+								<option value="-1" selected>Please Choose Ad Type</option>
+								<option value="2">All</option>
+								<option value="0">Intermission</option>
+								<option value="1">Banner</option>
+						</select></td>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</form>
+	</div>
+	</article>
+	<footer> JBT Backoffice Management System </footer>
+</body>
+</html>

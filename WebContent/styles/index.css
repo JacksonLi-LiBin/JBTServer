@@ -1,0 +1,292 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #616362; /*#E5E5E5*/
+}
+
+header {
+	width: 100%;
+	height: 140px;
+	background-color: #484A49;
+}
+
+article {
+	width: 900px;
+	padding-bottom: 90px;
+	margin: 30px auto 0 auto;
+}
+
+footer {
+	width: 100%;
+	height: 20px;
+	padding-top: 6px;
+	background-color: #484A49;
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header	.headercontent {
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 1px;
+}
+
+.headercontent .logo {
+	width: 162px;
+	height: 100px;
+	float: left;
+	margin-top: 20px;
+	background-image: url(../jackson_images/logo.png);
+}
+
+header	.cpwdlogo {
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 1px;
+}
+
+.cpwdlogo .logo {
+	width: 162px;
+	height: 100px;
+	margin-top: 20px;
+	margin-left: 42%;
+	background-image: url(../jackson_images/logo.png);
+}
+
+.headercontent .menu {
+	height: 45px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+.menu ul {
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	list-style: none;
+	box-shadow: 5px 3px 10px #000;
+	border-radius: 11px;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b1b1b1),
+		color-stop(100%, #363636));
+	background: -moz-linear-gradient(top, #b1b1b1 0%, #363636 100%);
+	background: -ms-linear-gradient(top, #b1b1b1 0%, #363636 100%);
+}
+
+.menu ul li {
+	height: 43px;
+	line-height: 43px;
+	float: left;
+	border: 1px solid #3C3C3C;
+	/*background-color:#616362;*/
+}
+
+.menu ul li:hover {
+	background-color: #D92026;
+}
+
+.menu ul li:first-child {
+	border-radius: 10px 0 0 10px;
+}
+
+.menu ul li:last-child {
+	border-radius: 0px 10px 10px 0px;
+}
+
+.menu ul li a {
+	display: block;
+	padding: 0 20px;
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+	border-left: 1px solid #0F1215;
+	box-shadow: 1px 1px 2px #d7d7d7 inset;
+}
+
+.menu ul li:first-child a {
+	border-radius: 10px 0 0 10px;
+}
+
+.menu ul li:last-child a {
+	border-radius: 0px 10px 10px 0px;
+}
+
+.logoutbtn {
+	width: 120px;
+	height: 35px;
+	float: right;
+	margin: 20px 50px 0 0;
+	padding: 0px;
+	color: #FFF;
+	border: none;
+	border-radius: 5px;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #B6B8BB),
+		color-stop(49%, #3D4046), color-stop(50%, #383A3D),
+		color-stop(100%, #54575D));
+	box-shadow: 5px 5px 18px #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.logoutbtn:hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D4D9E0),
+		color-stop(49%, #6A6E77), color-stop(50%, #2F3133),
+		color-stop(100%, #7A7D83));
+	color: #F1F1F1;
+	cursor: pointer;
+}
+/***************header end*******************/
+.formcontent {
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 130px;
+	margin: 40px auto 30px auto;
+	border: 2px solid #DDBEBE;
+}
+
+.formcontent select {
+	height: 32px;
+	font-size: 18px;
+}
+
+.formcontent table {
+	margin: 0 auto;
+}
+
+.formcontent table:first-child th {
+	color: white;
+	font-size: 36px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.formcontent table:last-child {
+	background-color: #FFF;
+	padding: 10px 20px;
+	color: #474747;
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.formcontent table:last-child tr {
+	height: 60px;
+}
+
+.formcontent table:last-child thead tr {
+	background-color: #E5E5E5;
+}
+
+.formcontent table:last-child tbody tr:hover {
+	background-color: #F1F1F1;
+}
+
+.formcontent table:last-child tr td {
+	border-bottom: 2px solid #858786;
+	padding: 10px;
+}
+
+.formcontent table:last-child tfoot td {
+	border: none;
+}
+
+.formcontent table:last-child input[type="text"],input[type="password"]
+	{
+	width: 250px;
+	height: 32px;
+	font-size: 18px;
+}
+
+.formcontent table:last-child input[type="submit"] {
+	width: 200px;
+	height: 40px;
+	font-weight: bold;
+	font-size: 16px;
+	background-color: #D92026;
+	border: 0;
+	color: #fff;
+}
+
+.formcontent table:last-child input[type="submit"]:hover {
+	background-color: red;
+	cursor: pointer;
+}
+
+.formcontent table:last-child input[type="button"] {
+	height: 40px;
+	font-weight: 900;
+	font-size: 16px;
+	border: none;
+	background-color: #D92026;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.formcontent table:last-child input[type="button"]:hover {
+	cursor: pointer;
+}
+
+.recommendTitle {
+	background-color: #E5E5E5;
+}
+/**************formcontent end*******************/
+.menelogo {
+	width: 855px;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.menelogoitem {
+	width: 150px;
+	float: left;
+	padding: 10px;
+	border: 0px solid #000;
+	margin-left: 80px;
+}
+
+.menelogoitem a {
+	text-decoration: none;
+}
+
+.menelogoitem h4 {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	color: #fff;
+}
+
+.menelogoitem:hover {
+	background-color: #E5E5E5;
+}
+
+.menelogoitem:hover h4 {
+	color: #000;
+}
+/**************menuiten end*******************/
+.imgPiexl {
+	margin-left: 8%;
+	font-size: 10px;
+	color: #f00;
+}
+
+.countPage {
+	border: 1px solid #ccc;
+}
+
+.countPage:HOVER {
+	cursor: pointer;
+}

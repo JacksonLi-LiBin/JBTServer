@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="scripts/jackson_commonUrl.js"></script>
+<title>Index</title>
+<script type="text/javascript">
+	var ws = null;
+	function startWebSocket() {
+		if ('WebSocket' in window)
+			ws = new WebSocket("ws://192.168.1.114:8080/JBT/mywebsocket.do?token=12345678");
+		else if ('MozWebSocket' in window)
+			ws = new MozWebSocket("ws://192.168.1.114:8080/JBT/mywebsocket.do?token=12345678");
+		else
+			alert("not support");
+
+		ws.onmessage = function(evt) {
+			alert(evt.data);
+		};
+
+		ws.onclose = function(evt) {
+			alert("close");
+		};
+
+		ws.onopen = function(evt) {
+			alert("open");
+		};
+	}
+
+	function sendMsg() {
+		ws.send(document.getElementById('writeMsg').value);
+	}
+</script>
+</head>
+<body onload="startWebSocket();">
+	<input type="text" id="writeMsg"></input>
+	<input type="button" value="send" onclick="sendMsg()"></input>
+</body>
+</html>

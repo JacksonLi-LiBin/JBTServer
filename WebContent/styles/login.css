@@ -1,0 +1,121 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #616362; /*#E5E5E5*/
+}
+
+header {
+	width: 100%;
+	height: 140px;
+	background-color: #484A49;
+}
+
+article {
+	width: 900px;
+	padding-bottom: 90px;
+	margin: 30px auto 0 auto;
+}
+
+footer {
+	width: 100%;
+	height: 20px;
+	padding-top: 6px;
+	background-color: #484A49;
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header	.headercontent {
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 1px;
+}
+
+.headercontent .logo {
+	width: 162px;
+	height: 100px;
+	float: left;
+	margin-top: 20px;
+	background-image: url(../jackson_images/logo.png);
+}
+/***************header end*******************/
+.formcontent {
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 130px;
+	margin: 40px auto 30px auto;
+}
+
+.welcometitle {
+	float: left;
+	margin-top: 50px;
+	margin-left: 120px;
+	color: #fff;
+	font-size: 34px;
+	font-family: "Comic Sans MS", cursive;
+	font-weight: bold;
+	text-shadow: 5px 5px 15px #000;
+}
+
+.loginbac {
+	width: 500px;
+	height: 300px;
+	background-color: #E2EFF5;
+	margin: 100px auto 0 auto;
+	padding-top: 1px;
+	box-shadow: 0px 0px 10px #fff;
+}
+
+.logincontent {
+	width: 480px;
+	height: 280px;
+	margin: 0 auto;
+	background-color: #FFF;
+	margin-top: 10px;
+}
+
+.logincontent table thead tr {
+	background-color: #F00;
+	height: 40px;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+.logincontent table tbody {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.logincontent table input[type="text"],input[type="password"] {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #484A49;
+	font-size: 15px;
+	background-color: #E9F8E4;
+}
+
+.logincontent table input[type="button"] {
+	width: 200px;
+	height: 40px;
+	font-weight: bold;
+	font-size: 16px;
+	background-color: red;
+	border: 0;
+	color: #fff;
+}
+
+.logincontent table input[type="button"]:hover {
+	background-color: #D92026;
+	cursor: pointer;
+}

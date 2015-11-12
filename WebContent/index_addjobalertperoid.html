@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Add Job Alert Period</title>
+<link href="styles/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="scripts/jackson_commonUrl.js"></script>
+<script type="text/javascript"
+	src="scripts/jackson_addjobalertperoid.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="headercontent">
+			<div class="logo"></div>
+			<button class="logoutbtn">Logout</button>
+			<div class="menu">
+				<ul>
+					<li><a href="index_uploadimage.html">Upload Ad Image</a></li>
+					<!--  
+					<li><a href="index_setimage.html">Set Ad Image</a></li>
+					
+					<li><a href="index_addjobalertperoid.html">Add Alert Period</a></li>
+					-->
+					<li><a href="index_email.html">Set Email</a></li>
+					<li><a href="index_settimeout.html">Set Timeout</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</header>
+	<article>
+		<div class="formcontent">
+			<form action="AddAlertPeriodServlet" method="post" onsubmit="return addperiod();">
+				<table width="100%">
+					<tr>
+						<th width="30%"><hr /></th>
+						<th align="center">Add Alert Period</th>
+						<th width="30%"><hr /></th>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+				</table>
+				<table width="80%" cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<td width="36%" align="right">Time:</td>
+							<td width="64%">millisecond<input type="text" name="adminToken" id="adminToken" readonly="readonly" style="display: none;"/></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td align="right">Set Period:</td>
+							<td><input type="text" maxlength="20" width="100%"
+								id="alert_time" name="alerttime" /></td>
+						</tr>
+						<tr>
+							<td align="right">Set Millisecond:</td>
+							<td><input type="text" maxlength="20"
+								onkeyup="this.value=this.value.replace(/\D/g,'')"
+								onafterpaste="this.value=this.value.replace(/\D/g,'')"
+								id="alert_millisecond" name="alertmillisecond" /></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="2" align="center"><input type="submit"
+								value="Add Alert Period" class="add" /></td>
+						</tr>
+					</tfoot>
+				</table>
+			</form>
+		</div>
+	</article>
+
+	<footer> JBT Backoffice Management System </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Set Timeout</title>
+<link href="styles/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="scripts/jackson_commonUrl.js"></script>
+<script type="text/javascript" src="scripts/jackson_settimeout.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="headercontent">
+			<div class="logo"></div>
+			<button class="logoutbtn">Logout</button>
+			<div class="menu">
+				<ul>
+					<li><a href="index_uploadimage.html">Upload Ad Image</a></li>
+					<!-- 
+				<li><a href="index_setimage.html">Set Ad Image</a></li>
+				 
+				<li><a href="index_addjobalertperoid.html">Add Alert Period</a></li>
+				-->
+					<li><a href="index_email.html">Set Email</a></li>
+					<li><a href="index_settimeout.html">Set Timeout</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</header>
+	<article>
+		<div class="formcontent">
+			<form action="AddAlertPeriodServlet" method="post"
+				onsubmit="return addperiod();">
+				<table width="100%">
+					<tr>
+						<th width="30%"><hr /></th>
+						<th align="center">Set Timeout</th>
+						<th width="30%"><hr /></th>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+				</table>
+				<table width="80%" cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<td width="39%" align="center">Description:</td>
+							<td width="61%">Time(Seconds)</td>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td align="center">User Timeout:</td>
+							<td><input type="text"
+								onkeyup="this.value=this.value.replace(/\D/g,'')"
+								onafterpaste="this.value=this.value.replace(/\D/g,'')" min="1"
+								maxlength="9" id="out_time" name="outtime" /></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center"><input type="button"
+								id="setOutTime" value="Set Operate Out Time" class="setTimeOut" /></td>
+						</tr>
+						<tr>
+							<td align="center">Change Password Timeout:</td>
+							<td><input type="text"
+								onkeyup="this.value=this.value.replace(/\D/g,'')"
+								onafterpaste="this.value=this.value.replace(/\D/g,'')" min="1"
+								maxlength="9" id="cpwd_out_time" name="cpwdouttime" /></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center"><input type="button"
+								id="setChangePasswordOutTime"
+								value="Set Change Password Out Time" class="setTimeOut" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</article>
+
+	<article>
+		<div class="formcontent">
+			<form action="AddAlertPeriodServlet" method="post"
+				onsubmit="return addperiod();">
+				<table width="100%">
+					<tr>
+						<th width="30%"><hr /></th>
+						<th align="center">Getting Data Time</th>
+						<th width="30%"><hr /></th>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+				</table>
+				<table width="80%" cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<td width="39%" align="center">Description:</td>
+							<td width="61%">Time</td>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td align="center">First Time:</td>
+							<td>H:<select id="firstGetHour"></select> M:<select
+								id="firstGetMinute"></select> S:<select id="firstGetSecond"></select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center"><input type="button"
+								id="setFirstGetTime" value="First Time Get Data"
+								class="setTimeOut" /></td>
+						</tr>
+						<tr>
+							<td align="center">Second Time:</td>
+							<td>H:<select id="secondGetHour"></select> M:<select
+								id="secondGetMinute"></select> S:<select id="secondGetSecond"></select></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center"><input type="button"
+								id="setSecondGetTime" value="Second Time Get Data"
+								class="setTimeOut" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</article>
+
+	<footer> JBT Backoffice Management System </footer>
+</body>
+</html>

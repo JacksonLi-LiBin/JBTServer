@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ad Detail</title>
+<link href="styles/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="scripts/jackson_commonUrl.js"></script>
+<script type="text/javascript" src="scripts/jackson_adintermission.js"></script>
+<script type="text/javascript" src="scripts/jackson_addetail.js"></script>
+</head>
+
+<body>
+	<header>
+	<div class="headercontent">
+		<div class="logo"></div>
+		<button class="logoutbtn">Logout</button>
+		<div class="menu">
+			<ul>
+				<li><a href="index_uploadimage.html">Upload Ad Image</a></li>
+				<!-- 
+				<li><a href="index_setimage.html">Set Ad Image</a></li>
+				 
+				<li><a href="index_addjobalertperoid.html">Add Alert Period</a></li>
+				-->
+				<li><a href="index_email.html">Set Email</a></li>
+				<li><a href="index_settimeout.html">Set Timeout</a></li>
+			</ul>
+		</div>
+	</div>
+
+	</header>
+	<article>
+	<div class="formcontent">
+		<form action="EditAdServlet" method="post">
+			<table width="100%">
+				<tr>
+					<th width="34%"><hr /></th>
+					<th width="34%" align="center">Set Image Info</th>
+					<th width="32%"><hr /></th>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+			<table width="80%" cellpadding="0" cellspacing="0">
+				<thead>
+					<tr>
+						<td width="36%" align="center">Image</td>
+						<td width="64%" align="center">Detail</td>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2" align="center"><input type="button" id="editImage"
+							value="Edit Image" class="add" /></td>
+					</tr>
+				</tfoot>
+			</table>
+		</form>
+	</div>
+	</article>
+
+	<footer> JBT Backoffice Management System </footer>
+</body>
+</html>
