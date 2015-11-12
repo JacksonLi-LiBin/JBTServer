@@ -154,10 +154,11 @@ public class UserResful {
 			if (listJob != null && listJob.size() > 0) {
 				StringBuffer stringBuffer = new StringBuffer("{\"d\":\"[");
 				for (JobJB job : listJob) {
-					stringBuffer
-							.append("{\\\"ID\\\":" + job.getJobId()
-									+ ",\\\"Title\\\":\\\"" + job.getTitle()
-									+ "\\\"},");
+					stringBuffer.append("{\\\"ID\\\":" + job.getJobId()
+							+ ",\\\"Title\\\":\\\"" + job.getTitle()
+							+ "\\\",\\\"Area\\\":\\\"" + job.getArea()
+							+ "\\\",\\\"Domain\\\":\\\"" + job.getDomain()
+							+ "\\\"},");
 				}
 				stringBuffer = new StringBuffer(
 						(stringBuffer.toString()).subSequence(0,
