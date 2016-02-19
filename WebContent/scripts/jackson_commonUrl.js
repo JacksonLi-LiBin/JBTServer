@@ -1,4 +1,4 @@
 /**
  * JacksonLi
  */
-var urlStr="http://192.168.1.71:8080/JBT/";
+var urlStr="http://192.168.15.103:8080/JBT/";

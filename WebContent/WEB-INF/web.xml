@@ -107,4 +107,7 @@
 		<servlet-name>GetDataFromJBServlet</servlet-name>
 		<url-pattern>/GetDataFromJBServlet</url-pattern>
 	</servlet-mapping>
+	<listener>
+		<listener-class>com.matrix.jbt.socket.SocketServiceLoader</listener-class>
+	</listener>
 </web-app>
