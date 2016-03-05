@@ -43,10 +43,10 @@ public class SocketServiceLoader implements ServletContextListener {
 			try {
 				if (null == serverSocket) {
 					this.serverSocket = new ServerSocket(Integer.parseInt(ReadProperties.read("url", "socketPort")));
-					System.out.println("socket start");
+					System.out.println("server socket start");
 				}
 			} catch (Exception e) {
-				System.out.println("SocketThread创建socket服务出错");
+				System.out.println("SocketThread create socket failed");
 				e.printStackTrace();
 			}
 
