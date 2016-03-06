@@ -94,23 +94,29 @@ public class SocketServiceLoader implements ServletContextListener {
 				try {
 					in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
 					PrintWriter out = new PrintWriter(socket.getOutputStream());
-					while (!socket.isClosed()) {
+					while (socket.isConnected() && !socket.isClosed()) {
 						String str;
-						str = in.readLine();
-						out.println("Hello!world!! " + str);
-						out.flush();
-						if (str == null || str.equals("end"))
+						if (in.read() != -1) {
+							str = in.readLine();
+							out.println(str);
+							out.flush();
+						} else {
 							break;
-						System.out.println(str);
+						}
 					}
-					socket.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			} finally {
-
+				if (socket != null) {
+					try {
+						socket.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
 			}
 		}
 	}
