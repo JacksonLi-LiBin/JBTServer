@@ -6,15 +6,21 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+import com.alibaba.fastjson.JSONObject;
 import com.matrix.jbt.tool.ReadProperties;
+import com.matrix.jbt.tool.UserPool;
 
 public class SocketServiceLoader implements ServletContextListener {
 	// socket server 线程
 	private SocketThread socketThread;
+	private List<Socket> mSockets = null;
 
 	@Override
 	public void contextDestroyed(ServletContextEvent arg0) {
@@ -27,7 +33,7 @@ public class SocketServiceLoader implements ServletContextListener {
 
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
-		// TODO Auto-generated method stub
+		mSockets = new ArrayList<Socket>();
 		if (null == socketThread) {
 			// 新建线程类
 			socketThread = new SocketThread(null);
@@ -57,6 +63,7 @@ public class SocketServiceLoader implements ServletContextListener {
 				try {
 					Socket socket = serverSocket.accept();
 					if (null != socket && !socket.isClosed()) {
+						mSockets.add(socket);
 						// 处理接受的数据
 						new Thread(new SocketOperate(socket)).start();
 					}
@@ -89,17 +96,30 @@ public class SocketServiceLoader implements ServletContextListener {
 
 		@Override
 		public void run() {
+			BufferedReader in = null;
+			PrintWriter out = null;
 			try {
-				BufferedReader in;
 				try {
 					in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
-					PrintWriter out = new PrintWriter(socket.getOutputStream());
-					while (socket.isConnected() && !socket.isClosed()) {
-						String str;
-						if (in.read() != -1) {
-							str = in.readLine();
-							out.println(str);
-							out.flush();
+					while (true) {
+						if (socket.isConnected() && !socket.isClosed()) {
+							String str = in.readLine();
+							if (str != null) {
+								for (Socket mSocket : mSockets) {
+									if (socket != mSocket) {
+										out = new PrintWriter(mSocket.getOutputStream());
+										out.println(str);
+										out.flush();
+									}
+								}
+								JSONObject obj = JSONObject.parseObject(str);
+								String token = obj.getString("token");
+								if (UserPool.users.get(token) != null) {
+									UserPool.userActions.get(token).reStartThread(new Date());
+								}
+							} else {
+								break;
+							}
 						} else {
 							break;
 						}
@@ -112,6 +132,7 @@ public class SocketServiceLoader implements ServletContextListener {
 			} finally {
 				if (socket != null) {
 					try {
+						mSockets.remove(socket);
 						socket.close();
 					} catch (IOException e) {
 						e.printStackTrace();
